@@ -33,9 +33,16 @@ rake db:seed
 
 `bin/dev`
 
+### Usage
+
+#### General
+
+A basic create, read, index and destroy UI for a User resource is available at the root path.
+
 #### Lookbook
 
 Preview of view components can be seen at `/lookbook`
+
 
 ### Notes
 
