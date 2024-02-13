@@ -1,0 +1,24 @@
+<div class="mb-10">
+  <%= form_for @user do |f| %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+    <%= f.text_field :email, placeholder: "Email" %>
+    <%= render ButtonComponent.new(title: 'Create User', type: :submit, style: :primary) %>
+  <% end %>
+</div>
+
+<table class="min-w-full divide-y divide-gray-300">
+  <thead class="bg-gray-50">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200 bg-white" id="users">
+    <% User.all.each do |user| %>
+      <%= render user %>
+    <% end %>
+  </tbody>
+</table>

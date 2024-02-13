@@ -1,0 +1,4 @@
+<%= link_to url, method: method, class: "flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-#{text_colour}-600 hover:bg-slate-100 hover:text-#{text_colour}-700 focus:outline-none focus:bg-slate-100 focus:text-#{text_colour}-700", data: { turbo_method: method } do %>
+  <%= heroicon icon, options: { class: "h-4 w-4 inline-block text-#{text_colour}-500 hover:text-#{text_colour}-700" } if icon.present? %>
+  <span><%= title %></span>
+<% end %>

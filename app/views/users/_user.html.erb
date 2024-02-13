@@ -1,0 +1,21 @@
+<tr class="text-center" id="<%= dom_id(user) %>">
+  <td><%= user.first_name %></td>
+  <td><%= user.last_name %></td>
+  <td><%= user.email %></td>
+  <td>
+    <div class="relative inline-block z-0" data-controller="dropdown">
+      <button type="button"
+              class="inline-flex justify-center items-center"
+              data-dropdown-target="button"
+              data-action="click->dropdown#toggle keydown.esc->dropdown#toggle click@window->dropdown#hide">
+
+        <%= heroicon "ellipsis-vertical", options: { class: "h-6 w-6 inline-block text-gray-500 hover:text-slate-700" } %>
+      </button>
+
+      <%= render DropdownMenuComponent.new do %>
+        <%= render DropdownMenuItemComponent.new(title: 'View', url: url_for(user), icon: "magnifying-glass") %>
+        <%= render DropdownMenuItemComponent.new(title: 'Remove', url: url_for(user), method: :delete, icon: "trash", style: :warning) %>
+      <% end %>
+    </div>
+  </td>
+</tr>
