@@ -31,7 +31,7 @@ rake db:seed
 
 #### Server
 
-`bin/dev`
+`./bin/dev`
 
 ### Usage
 
@@ -43,6 +43,9 @@ A basic create, read, index and destroy UI for a User resource is available at t
 
 Preview of view components can be seen at `/lookbook`
 
+### Testing
+
+`bundle exec rspec`
 
 ### Notes
 

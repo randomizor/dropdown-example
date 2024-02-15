@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DropdownMenuComponentPreview < ViewComponent::Preview
   # @param hidden
   def default(hidden: false)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DropdownMenuItemComponentPreview < ViewComponent::Preview
   # @param title
   # @param url
